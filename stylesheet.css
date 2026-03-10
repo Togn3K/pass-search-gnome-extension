@@ -1,0 +1,60 @@
+.pass-search-container {
+    width: 400px;
+    padding: 8px;
+}
+
+.pass-search-entry {
+    margin-bottom: 8px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.pass-search-scroll {
+    max-height: 350px;
+}
+
+.pass-search-results {
+    spacing: 2px;
+}
+
+.pass-search-result-row {
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition-duration: 100ms;
+}
+
+.pass-search-result-row:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.pass-search-result-row.selected {
+    background-color: rgba(100, 160, 255, 0.25);
+    border: 1px solid rgba(100, 160, 255, 0.5);
+}
+
+.pass-search-result-row.selected .pass-search-result-path {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.pass-search-result-row.selected .pass-search-result-name {
+    color: #ffffff;
+}
+
+.pass-search-result-path {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+}
+
+.pass-search-result-name {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pass-search-status {
+    margin-top: 6px;
+    padding: 4px 10px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+}

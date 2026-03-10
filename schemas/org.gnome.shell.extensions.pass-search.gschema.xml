@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.pass-search"
+          path="/org/gnome/shell/extensions/pass-search/">
+
+    <key name="toggle-shortcut" type="as">
+      <default>['&lt;Super&gt;p']</default>
+      <summary>Toggle shortcut</summary>
+      <description>Keyboard shortcut to open/close the password search popup</description>
+    </key>
+
+    <key name="clear-clipboard-seconds" type="i">
+      <default>45</default>
+      <summary>Clear clipboard after (seconds)</summary>
+      <description>Number of seconds after which the clipboard is cleared. Set to 0 to disable.</description>
+    </key>
+
+    <key name="show-otp" type="b">
+      <default>false</default>
+      <summary>Show OTP codes</summary>
+      <description>If true, retrieve OTP codes using pass otp instead of the password</description>
+    </key>
+
+  </schema>
+</schemalist>
