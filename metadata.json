@@ -1,9 +1,11 @@
 {
-    "uuid": "pass-search@togn3k",
-    "name": "Pass Search",
-    "description": "Quick search and retrieve passwords from pass (the standard unix password manager)",
-    "shell-version": ["49"],
-    "version": 1,
-    "url": "",
-    "settings-schema": "org.gnome.shell.extensions.pass-search"
+  "uuid": "pass-search@togn3k",
+  "name": "Pass Search",
+  "description": "Quick search and retrieve passwords from pass (the standard unix password manager)",
+  "shell-version": [
+    "49"
+  ],
+  "version": 1,
+  "url": "https://github.com/Togn3K/pass-search-gnome-extension",
+  "settings-schema": "org.gnome.shell.extensions.pass-search"
 }
