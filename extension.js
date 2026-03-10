@@ -41,7 +41,7 @@ class PassSearchButton extends PanelMenu.Button {
         // Connect menu open/close
         this.menu.connect('open-state-changed', (_menu, open) => {
             if (open) {
-                // Small delay to ensure the menu is laid out before focusing
+                this._loadEntries();
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 50, () => {
                     this._searchEntry.grab_key_focus();
                     return GLib.SOURCE_REMOVE;
