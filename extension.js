@@ -73,6 +73,11 @@ class PassSearchButton extends PanelMenu.Button {
         this._searchEntry.connect('key-press-event', (_actor, event) => {
             return this._onSearchKeyPress(event);
         });
+        this._searchEntry.clutter_text.connect('activate', () => {
+            const children = this._resultBox.get_children();
+            if (this._selectedIndex >= 0 && this._selectedIndex < children.length)
+                this._activateEntry(children[this._selectedIndex]._passEntry);
+        });
         box.add_child(this._searchEntry);
 
         // Scrollable results area
