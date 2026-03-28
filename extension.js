@@ -214,9 +214,14 @@ class PassSearchButton extends PanelMenu.Button {
             }
             return Clutter.EVENT_STOP;
         } else if (symbol === Clutter.KEY_Return || symbol === Clutter.KEY_KP_Enter) {
+            const state = event.get_state();
+            const ctrl = (state & Clutter.ModifierType.CONTROL_MASK) !== 0;
             if (this._selectedIndex >= 0 && this._selectedIndex < children.length) {
                 const row = children[this._selectedIndex];
-                this._activateEntry(row._passEntry);
+                if (ctrl)
+                    this._copyUsername(row._passEntry);
+                else
+                    this._activateEntry(row._passEntry);
             }
             return Clutter.EVENT_STOP;
         } else if (symbol === Clutter.KEY_Escape) {
@@ -262,6 +267,14 @@ class PassSearchButton extends PanelMenu.Button {
     _activateEntry(entry) {
         this.menu.close();
         this._copyPassword(entry);
+    }
+
+    _copyUsername(entry) {
+        const lastSlash = entry.lastIndexOf('/');
+        const username = lastSlash >= 0 ? entry.substring(lastSlash + 1) : entry;
+        this._copyToClipboard(username);
+        this.menu.close();
+        Main.notify('Pass Search', `Copied username "${username}" to clipboard`);
     }
 
     _copyPassword(entry) {
