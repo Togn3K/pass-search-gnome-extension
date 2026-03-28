@@ -5,7 +5,7 @@
   "shell-version": [
     "49"
   ],
-  "version": 1,
+  "version": 2,
   "url": "https://github.com/Togn3K/pass-search-gnome-extension",
   "settings-schema": "org.gnome.shell.extensions.pass-search"
 }
